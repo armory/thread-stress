@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: threadstress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: threadstress
+  template:
+    metadata:
+      labels:
+        app: threadstress
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: threadstress
+          image: ''
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 10001
+              protocol: TCP
+          env:
+            - name: RATE_MS
+              value: '50'
+            - name: SLEEP_SEC
+              value: '1'
