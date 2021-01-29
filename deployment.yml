@@ -25,3 +25,8 @@ spec:
               value: '50'
             - name: SLEEP_SEC
               value: '1'
+          resources:
+            limits:
+              memory: 512m
+            requests:
+              memory: 512m
