@@ -20,12 +20,12 @@ With default values in place, the program has a constant amount of ~150 live thr
 
 1. Create the jar file for the java application
 
-```shell
-./gradlew build
-```
+    ```shell
+   ./gradlew build
+   ```
 
 1. Create the Docker image
 
-```shell
-docker build -t <tag> .
-```
+   ```shell
+   docker build -t <tag> .
+   ```
